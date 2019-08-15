@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mapping-locations>
-    <file-location path="/src/main/sqlconf/adRevenueDaoImpl.xml"/>
-    <directory-location path="/src/main/sqlconf/"/>
-</mapping-locations>
