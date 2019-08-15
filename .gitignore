@@ -1,5 +1,6 @@
-/out/
-/conf/
-/.idea/
-/src/test/
-/target/
+out
+conf
+/.idea
+src/test/
+target
+comyizedynamicSQL.iml
