@@ -1,6 +1,7 @@
 out
 conf
-/.idea
-src/test/
+.idea
+src/test
 target
 comyizedynamicSQL.iml
+src/main/sqlconf
