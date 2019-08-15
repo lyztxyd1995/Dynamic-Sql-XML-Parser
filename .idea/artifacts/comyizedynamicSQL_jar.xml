@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="comyizedynamicSQL:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/comyizedynamicSQL_jar</output-path>
+    <root id="archive" name="comyizedynamicSQL.jar">
+      <element id="module-output" name="comyizedynamicSQL" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/jaxen/jaxen/1.2.0/jaxen-1.2.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

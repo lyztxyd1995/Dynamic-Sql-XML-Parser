@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings namespace="v1.adrevenue.AdRevenueDaoImpl">
+    <named-native-query name="deleteAdRevenues">
+        DELETE
+        FROM ADREVENUE
+        WHERE date = ?
+        AND ssp = ?
+        AND isEBDA = ?
+    </named-native-query>
+
+    <named-native-query name="getAllSSPsWithRevenueByDate">
+        SELECT DISTINCT(ssp) FROM ADREVENUE
+        <where>
+            <if text=" date != null ">
+                AND date = #{date}
+            </if>
+            <if text="siteUUIDs != null">
+                AND siteUUID IN(:siteUUIDs)
+            </if>
+        </where>
+    </named-native-query>
+
+    <named-native-query name="getSiteSSPsMapByDate">
+        SELECT siteUUID, group_concat(DISTINCT ssp separator ',') AS SSPs
+        FROM SITEDOMAIN JOIN ADREVENUE USING(domain)
+        <switch>
+            <case text=" date != null ">
+                WHERE date = #{date}
+            </case>
+            <case text=" isEBDA != null ">
+                WHERE isEBDA = #{isEBDA}
+            </case>
+            <otherwise>
+                WHERE impression > 0
+            </otherwise>
+        </switch>
+    </named-native-query>
+
+    <named-native-query name="getAllRevenueWithUnusualFormat">
+        SELECT name, revenue FROM   ADREVENUE
+        WHERE name = #{name}<if text="date != null">
+            AND date = #{date}
+        </if>
+        GROUP BY name
+    </named-native-query>
+
+
+    <named-native-query name="getAllRevenueWithRecursiveStructure">
+        SELECT name, revenue FROM   ADREVENUE
+        WHERE name = #{name}
+        <if text="date != null">
+            AND date = #{date}
+            <if text="ssp != null">
+                AND ssp = #{ssp}
+                 <if text = "siteUUID != null">
+                     AND siteUUID = #{siteUUID}
+                 </if>
+            </if>
+        </if>
+        GROUP BY name
+    </named-native-query>
+
+
+</entity-mappings>
