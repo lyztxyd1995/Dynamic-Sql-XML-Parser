@@ -7,72 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb373809-2983-4890-8d8a-ee770c878ab7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/comyizedynamicSQL_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comyizedynamicSQL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/sqlMapping.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/comyizedynamicSQL_jar/comyizedynamicSQL.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/QueryGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/parameter/ParameterList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/parameter/ParameterMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/parameter/exceptions/IllegalParameterIndexException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/parameter/exceptions/NoMarkValueFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/parameter/exceptions/NoParameterFoundForMarkException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/AbstractSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/BasicSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/CaseSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/IfSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/InvalidTagNameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/OtherwiseSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/SimpleSqlNodeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/SqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/SwitchSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/WhereSqlNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/expression/ExpressionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/expression/InvalidExpressionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlNodes/expression/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlQuery/BasicSqlQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlQuery/EmptySqlQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yize/dynamicsql/sqlQuery/SqlQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sqlconf/adRefreshDaoImpl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sqlconf/adRevenueDaoImpl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sqlconf/geoAdUnitRevenueDaoImpl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AdRefreshDaoImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AdRevenueDaoImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/comyizedynamicSQL.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/QueryGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/parameter/ParameterList$ParamNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/parameter/ParameterList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/parameter/ParameterMap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/parameter/exceptions/IllegalParameterIndexException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/parameter/exceptions/NoMarkValueFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/parameter/exceptions/NoParameterFoundForMarkException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/AbstractSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/BasicSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/CaseSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/IfSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/InvalidTagNameException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/OtherwiseSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/SimpleSqlNodeFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/SqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/SwitchSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/WhereSqlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/expression/ExpressionUtils$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/expression/ExpressionUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/expression/InvalidExpressionException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlNodes/expression/Operator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlQuery/BasicSqlQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlQuery/EmptySqlQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/yize/dynamicsql/sqlQuery/SqlQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/AdRefreshDaoImplTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/AdRevenueDaoImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -257,8 +192,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="102" />
-    <option name="y" value="105" />
+    <option name="x" value="173" />
+    <option name="y" value="23" />
     <option name="width" value="1660" />
     <option name="height" value="970" />
   </component>
@@ -401,7 +336,7 @@
       <workItem from="1565294095848" duration="2032000" />
       <workItem from="1565368447897" duration="73335000" />
       <workItem from="1565812821540" duration="144000" />
-      <workItem from="1565817542085" duration="5073000" />
+      <workItem from="1565817542085" duration="5520000" />
     </task>
     <servers />
   </component>
@@ -438,7 +373,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105330000" />
+    <option name="totallyTimeSpent" value="105777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,9 +385,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="105" width="1660" height="970" extended-state="0" />
+    <frame x="173" y="23" width="1660" height="970" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2249691" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2249691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -467,7 +402,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295325" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.16970387" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.40660593" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.24943052" />
