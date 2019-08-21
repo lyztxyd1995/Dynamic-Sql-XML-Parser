@@ -14,6 +14,6 @@ to help Java developers easily write sql queries without painful concatenating s
   <version>1.0.1-RELEASE</version>
 </dependency>
 ```
-## 2. Directly download jar file from 
-/com/github/lyztxyd1995/dynamicSQL/1.0.1-RELEASE/dynamicSQL-1.0.1-RELEASE.jar
+## 2. Directly download jar file from: 
+http://com/github/lyztxyd1995/dynamicSQL/1.0.1-RELEASE/dynamicSQL-1.0.1-RELEASE.jar
 
