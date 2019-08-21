@@ -1,7 +1,7 @@
-package com.yize.dynamicsql.sqlNodes.expression;
+package com.github.lyztxyd1995.dynamicsql.sqlNodes.expression;
 
-import com.yize.dynamicsql.parameter.ParameterMap;
-import com.yize.dynamicsql.parameter.exceptions.NoMarkValueFoundException;
+import com.github.lyztxyd1995.dynamicsql.parameter.ParameterMap;
+import com.github.lyztxyd1995.dynamicsql.parameter.exceptions.NoMarkValueFoundException;
 
 import java.util.regex.Pattern;
 

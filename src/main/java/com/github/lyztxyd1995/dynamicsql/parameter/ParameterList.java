@@ -1,6 +1,6 @@
-package com.yize.dynamicsql.parameter;
-import com.yize.dynamicsql.parameter.exceptions.IllegalParameterIndexException;
-import com.yize.dynamicsql.parameter.exceptions.NoParameterFoundForMarkException;
+package com.github.lyztxyd1995.dynamicsql.parameter;
+import com.github.lyztxyd1995.dynamicsql.parameter.exceptions.IllegalParameterIndexException;
+import com.github.lyztxyd1995.dynamicsql.parameter.exceptions.NoParameterFoundForMarkException;
 
 class ParameterList {
 

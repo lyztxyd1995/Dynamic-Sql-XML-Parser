@@ -1,8 +1,8 @@
-package com.yize.dynamicsql;
+package com.github.lyztxyd1995.dynamicsql;
 
-import com.yize.dynamicsql.sqlQuery.BasicSqlQuery;
-import com.yize.dynamicsql.sqlQuery.EmptySqlQuery;
-import com.yize.dynamicsql.sqlQuery.SqlQuery;
+import com.github.lyztxyd1995.dynamicsql.sqlQuery.BasicSqlQuery;
+import com.github.lyztxyd1995.dynamicsql.sqlQuery.EmptySqlQuery;
+import com.github.lyztxyd1995.dynamicsql.sqlQuery.SqlQuery;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;

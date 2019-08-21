@@ -1,7 +1,7 @@
-package com.yize.dynamicsql.sqlQuery;
-import com.yize.dynamicsql.parameter.ParameterMap;
-import com.yize.dynamicsql.sqlNodes.SimpleSqlNodeFactory;
-import com.yize.dynamicsql.sqlNodes.SqlNode;
+package com.github.lyztxyd1995.dynamicsql.sqlQuery;
+import com.github.lyztxyd1995.dynamicsql.parameter.ParameterMap;
+import com.github.lyztxyd1995.dynamicsql.sqlNodes.SimpleSqlNodeFactory;
+import com.github.lyztxyd1995.dynamicsql.sqlNodes.SqlNode;
 import org.dom4j.Element;
 
 import java.util.List;

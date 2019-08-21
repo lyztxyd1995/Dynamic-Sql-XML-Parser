@@ -1,6 +1,6 @@
-package com.yize.dynamicsql.sqlNodes;
+package com.github.lyztxyd1995.dynamicsql.sqlNodes;
 
-import com.yize.dynamicsql.parameter.ParameterMap;
+import com.github.lyztxyd1995.dynamicsql.parameter.ParameterMap;
 import org.dom4j.Element;
 
 import java.util.Iterator;

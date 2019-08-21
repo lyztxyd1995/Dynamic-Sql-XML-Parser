@@ -1,4 +1,4 @@
-package com.yize.dynamicsql.parameter;
+package com.github.lyztxyd1995.dynamicsql.parameter;
 import java.util.HashMap;
 import java.util.Map;
 

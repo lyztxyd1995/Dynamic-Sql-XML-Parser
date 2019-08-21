@@ -1,4 +1,4 @@
-package com.yize.dynamicsql.parameter.exceptions;
+package com.github.lyztxyd1995.dynamicsql.parameter.exceptions;
 
 public class IllegalParameterIndexException extends RuntimeException {
 

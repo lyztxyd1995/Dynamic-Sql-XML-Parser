@@ -1,4 +1,4 @@
-package com.yize.dynamicsql.sqlNodes.expression;
+package com.github.lyztxyd1995.dynamicsql.sqlNodes.expression;
 
 public class InvalidExpressionException extends RuntimeException {
 

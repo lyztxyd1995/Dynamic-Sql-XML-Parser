@@ -1,4 +1,4 @@
-package com.yize.dynamicsql.sqlQuery;
+package com.github.lyztxyd1995.dynamicsql.sqlQuery;
 
 import java.util.List;
 
