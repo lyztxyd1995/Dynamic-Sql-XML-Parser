@@ -22,6 +22,22 @@ https://oss.sonatype.org/service/local/repositories/comgithublyztxyd1995-1000/co
 
 ## 2. Custom configurations
 
-To use the package, we need first add a sqlMapping.xml
+### (1): Add the *sqlMapping.xml* configuration file under the conf folder
+To use the package, we need first add a **sqlMapping.xml** file under **conf** folder, which is directly under the project's root directory. If there is no conf folder in the project, you need to manually create one and make sure it's directly under the root directory.
+
+The format of the configuration file should be as below:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping-locations>
+<!--    specify the file location for the xml file which will be used to wrap sql queries-->
+    <file-location path="/src/main/sqlconf/adRevenueDaoImpl.xml"/>
+<!--    specify the directory location, which will include xml files for sql queries-->
+    <directory-location path="/src/main/sqlconf/"/>
+</mapping-locations>
+```
+
+
+
 
 
