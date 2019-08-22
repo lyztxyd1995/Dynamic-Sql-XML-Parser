@@ -5,7 +5,9 @@ to help Java developers easily write sql queries without painful concatenating s
 
 # Get Started
 
-## 1. By using maven
+## 1. Installing
+
+### (1). By using maven
 
 ```xml
 <dependency>
@@ -14,7 +16,8 @@ to help Java developers easily write sql queries without painful concatenating s
   <version>1.0.1-RELEASE</version>
 </dependency>
 ```
-## 2. Directly download jar file from the link below and import to the project: 
+
+### 2. Directly download jar file from the link below and import to the project: 
 https://oss.sonatype.org/service/local/repositories/comgithublyztxyd1995-1000/content/com/github/lyztxyd1995/dynamicSQL/1.0.1-RELEASE/dynamicSQL-1.0.1-RELEASE.jar
 
 
