@@ -27,7 +27,7 @@ To use the package, we need first add a **sqlMapping.xml** file under **conf** f
 
 The format of the configuration file should be as below:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <mapping-locations>
 <!--    specify the file location for the xml file which will be used to wrap sql queries-->
