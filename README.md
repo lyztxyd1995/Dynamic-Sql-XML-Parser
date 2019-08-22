@@ -3,7 +3,7 @@
 A light-weight, simple and fast library to generate dynamic sql query from XML based on Java. The goal of this library is 
 to help Java developers easily write sql queries without painfully concatenating SQL Strings. By writing all sql quries as well as adding tags in XML files, all sql queries could be decoupled from the Java code and become dynamic and easily maintainable. This library only performs as a sql query generator, not an executor or ORM. Therefore, it could be easily integrated with any othe ORM frameworks, JPA (like Hibernate) and JDBC.
 
-# 1.Get Started
+# 1. Get Started
 
 ## 1. Installation
 
@@ -182,9 +182,70 @@ public class testDaoImpl {
 }
 ```
 
-# 3. Features
+# 3. XML Tags Introduction
+To write sql dynamically, several tags could be used in the xml for different clauses, such as 'IF', 'WHERE', 'SWITCH'. 
+
+## if
+```xml
+ <if text = 'date != null'>
+    WHERE date = #{date}
+ </if>
+ 
+  <if text = 'date == null'>
+    WHERE date IS NULL
+ </if>
+ 
+  <if text = "date != null and url != null">
+    WHERE date = #{date} AND url = #{url}
+  </if>
+```
+The most common thing to do in dynamic SQL is conditionally include a part of a where clause. This could be easily achieved by using the 'IF' tag. The query string will only be appended when the expression for text attribute is true.  
+
+The operators used in the expression text could be: 
+EQUAL("=="), NOT_EQUAL("!="), LARGE_EQUAL(">="), LESS_EQUAL("<="), LESS("<"), LARGE(">")
 
 
+## switch, case, otherwise
 
+Sometimes we don’t want all of the conditionals to apply, instead we want to choose only one case among many options. Similar as a switch statement in Java, we also provide a switch element.
 
+```xml
+        <switch>
+            <case text=" date != null ">
+                WHERE date = #{date}
+            </case>
+            <case text=" url != null ">
+                WHERE url = #{url}
+            </case>
+            <otherwise>
+                WHERE impression > 0
+            </otherwise>
+        </switch>
+```
+The switch element will fetch only one child element if the expresion is true. Like the example above, 
+if date is provided, the query will search by date. Otherwise, if url is provided, the query will search by url. If neither is provided, by default, the query will search by 'impression > 0' 
 
+## where, if
+
+The where tag will make the query more consistent and reduce the potential mistake we might make if we directly use 'if' clause.
+
+The example is as below:
+
+```xml
+<select id="findActiveBlogLike"
+     resultType="Blog">
+  SELECT * FROM BLOG
+  <where>
+    <if text="state != null">
+        AND state = #{state}
+    </if>
+    <if text="title != null">
+        AND title like #{title}
+    </if>
+    <if text="author != null and author.name != null">
+        AND author_name like #{author.name}
+    </if>
+  </where>
+</select>
+```
+By using where, as long as the clause (eg: text="state != null") in each 'if' element is true, the text inside the element  (eg: AND state = #{state}) will be appended to the whole query string. If none of the clauses is true, there will be no WHERE statement in the sql query and the query will be 'SELECT * FROM BLOG'.
