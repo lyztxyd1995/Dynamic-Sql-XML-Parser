@@ -31,7 +31,7 @@ The format of the configuration file should be as below:
 <?xml version="1.0" encoding="UTF-8"?>
 <mapping-locations>
 <!--    specify the file location for the xml file which will be used to wrap sql queries-->
-    <file-location path="/src/main/sqlconf/adRevenueDaoImpl.xml"/>
+    <file-location path="/src/main/sqlconf/orm.xml"/>
 <!--    specify the directory location, which will include xml files for sql queries-->
     <directory-location path="/src/main/sqlconf/"/>
 </mapping-locations>
