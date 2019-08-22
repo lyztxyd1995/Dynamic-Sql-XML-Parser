@@ -59,11 +59,128 @@ The next step is to write the xml file which includes sql queries. Make sure the
     </named-native-query>
 </entity-mappings>
 ```
-The namepace for the root element (entity-mappings) will indicate which Class this file will be used to generate the query for. There is no restriction for it, however, the full Class name is recommended to be used here. 
+The root element's **namepace** (entity-mappings) will indicate which Class this file will be used to generate the query for. There is no restriction for it, however, the full Class name is recommended to be used here. 
 
 Each sql query should be wrapped inside one <named-native-query> tag with a unique query name. Also, there is no restriction for this name, however, the method name, for which this query is used, is recommended to be used.
   
 Last but not the least, after finishing the customized sql xml, make sure the file path (or the file's directory path) is included in the **sqlMapping.xml** as shown above.
+
+
+# Code Example
+
+Below is the code example to show how to use the library in a 
+
+sql query xml:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings namespace="com.dao.testDaoImpl">
+ 
+    <named-native-query name="selectSitesByDate">
+        SELECT siteUUID 
+        FROM  SITES
+        WHERE url = ?
+        <if text="date != null">
+            AND date = #{date}
+        </if>
+    </named-native-query>
+  
+    <named-native-query name="selectSitesByWhere">
+        SELECT * FROM SITES
+        <where>
+            <if text=" date != null ">
+                AND date = #{date}
+            </if>
+            <if text="siteUUIDs != null">
+                AND siteUUID IN(:siteUUIDs)
+            </if>
+        </where>
+    </named-native-query>
+
+    <named-native-query name="selectSitesBySwitch">
+        SELECT *
+        FROM SITES
+        <switch>
+            <case text=" date != null ">
+                WHERE date = #{date}
+            </case>
+            <case text=" url != null ">
+                WHERE url = #{url}
+            </case>
+            <otherwise>
+                WHERE impression > 0
+            </otherwise>
+        </switch>
+    </named-native-query>
+</entity-mappings>
+```
+Java Class which tests all queries above
+```java
+public class testDaoImpl {
+
+    public void selectSitesByDate() throws DocumentException{
+        String queryString1 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesByDate")
+                    .setParameter(1, "github.com")
+                    .getQueryString();
+        /**
+         * print result: 'SELECT siteUUID FROM  SITES WHERE url = 'github.com''
+         */
+        System.out.println(queryString1);
+
+        String queryString2 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesByDate")
+                .setParameter(1, "github.com")
+                .setParameter("date", "2019-08-20")
+                .getQueryString();
+        /**
+         * print result: 'SELECT siteUUID FROM  SITES WHERE url = 'github.com' AND date = '2019-08-20''
+         */
+        System.out.println(queryString2);
+    }
+
+    public void selectSitesByWhere() throws DocumentException {
+        String queryString1 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesByWhere")
+                .setParameter("date", "2019-08-20")
+                .getQueryString();
+        /**
+         * print result: 'SELECT * FROM SITES WHERE date = '2019-08-20''
+         */
+        System.out.println(queryString1);
+
+        String queryString2 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesByWhere")
+                .setParameter("siteUUIDs", Arrays.asList("id1", "id2"))
+                .getQueryString();
+        /**
+         * print result: 'SELECT * FROM SITES WHERE siteUUIDs IN ('id1','id2')'
+         */
+        System.out.println(queryString1);
+    }
+
+    public void selectSitesBySwitch() throws DocumentException {
+        String queryString1 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesBySwitch")
+                .setParameter("date", "2019-08-20")
+                .getQueryString();
+        /**
+         * print result: 'SELECT * FROM SITES WHERE date = '2019-08-20''
+         */
+        System.out.println(queryString1);
+
+        String queryString2 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesBySwitch")
+                .setParameter("url", "github.com")
+                .getQueryString();
+        /**
+         * print result: 'SELECT * FROM SITES WHERE url = 'github.com''
+         */
+        System.out.println(queryString2);
+
+        String queryString3 = QueryGenerator.createNamedQuery("com.dao.testDaoImpl", "selectSitesBySwitch")
+                .getQueryString();
+        /**
+         * print result: 'SELECT * FROM SITES WHERE impression > 0'
+         */
+        System.out.println(queryString2);
+    }
+}
+```
 
 
 
