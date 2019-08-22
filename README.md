@@ -70,7 +70,7 @@ Last but not the least, after finishing the customized sql xml, make sure the fi
 
 Below is the code example to show how to use the library in a 
 
-sql query xml:
+**sql query xml**:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -114,7 +114,7 @@ sql query xml:
     </named-native-query>
 </entity-mappings>
 ```
-Java Class which tests all queries above
+**Java Class which tests all queries above**
 ```java
 public class testDaoImpl {
 
