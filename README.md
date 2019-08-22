@@ -32,7 +32,7 @@ The format of the configuration file should be as below example:
 <mapping-locations>
 <!--    specify the file location for one xml file which includes sql queries-->
     <file-location path="/src/main/sqlconf/orm.xml"/>
-<!--    specify the directory location, which will include xml files for sql queries-->
+<!--    specify the directory location, which will include all xml files for sql queries under the directory-->
     <directory-location path="/src/main/sqlconf/"/>
 </mapping-locations>
 ```
@@ -42,9 +42,28 @@ Also, by specifying the <directory-location-path/>, all the files under the path
 
 ### (2): Customize your own xml for sql quries.
 
-The next step is to write the xml file which includes sql queries. Make sure the xml file follows the schema as the following exaple: 
+The next step is to write the xml file which includes sql queries. Make sure the xml file follows the schema as the following example:
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings namespace="com.test.testDao">
+    <named-native-query name="deletePost">
+        DELETE
+        FROM POST
+        WHERE date = ?
+    </named-native-query>
+  
+    <named-native-query name="selectPostByDate">
+        SELECT * FROM POST
+        WHERE date = ?
+    </named-native-query>
+</entity-mappings>
+```
+The namepace for the root element (entity-mappings) will indicate which Class this file will be used to generate the query for. There is no restriction for it, however, the full Class name is recommended to be used here. 
 
+Each sql query should be wrapped inside one <named-native-query> tag with a unique query name. Also, there is no restriction for this name, however, the method name, for which this query is used, is recommended to be used.
+  
+Last but not the least, after finishing the customized sql xml, make sure the file path (or the file's directory path) is included in the **sqlMapping.xml** as shown above.
 
 
 
